@@ -1,1 +1,2 @@
-input: mitchschmidt   output: 5150\ninput: shawnstone: 10958
+input: mitchschmidt   output: 5150
+input: shawnstone     output: 10958

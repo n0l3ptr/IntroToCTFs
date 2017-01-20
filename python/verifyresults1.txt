@@ -1,0 +1,1 @@
+input: mitchschmidt   output: 5150\ninput: shawnstone: 10958

@@ -1,4 +1,5 @@
 #Homework Assignment
+*please refer to the assignment on the class home page
 ##Problem 1
 ```
 You must get the flag and submit a write-up including your exploit code.

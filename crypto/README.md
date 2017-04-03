@@ -12,9 +12,11 @@ len(key) == 16
 
 with F box:
 
+```python
 def F(block, key):
     s = num2str(str2num(block) ^ key)
     return s[1:] + s[0]
+```
     
     
 ### Question 3:

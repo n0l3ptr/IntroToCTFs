@@ -2,26 +2,29 @@
 
 We find that r2's documentation can be quite old and uninformative so we decided to make our own cheat sheet. Some of this we picked up from the docs, other cheat sheets, or old CTF write-ups. Let us know if anything is out of date!
 
-## Contents
-|Topic                              |Program/File|Index|
-|-----------------------------------|------------|-----|
-|Downloading/Installing             |            |1    |
-|Starting r2                        |radare2     |2    |
-|Binary Information Extraction      |rabin2      |3    |
-|Run binaries in exotic environments|rarun2      |4    |
-|Project files                      |radare2     |5    |
-|Custom Config file                 |~/.radare2rc|6    |
-|Shellcode generation               |ragg2       |7    |
-|Diff files                         |radiff2     |8    |
-|TODO / Wish list                   |            |Last |
+
+## Table of Contents
+
+|Topic                                         |Program/File|Index|
+|----------------------------------------------|------------|-----|
+|[Downloading/Installing](#downloading/installing)| |1 |
+|[Starting r2](#starting-r2)|radare2 |2 |                   
+|[Binary Information Extraction](#binary-information-extraction)|rabin2 |3 |
+|[Run binaries in exotic environments](#run-binaries-in-exotic-environments)|rarun2 |4 |
+|[Project files](#project-files)|radare2|5 |                  
+|[Custom Config file](#custom-conifg-file)|~/.radare2rc|6 |          
+|[Shellcode generation](#shellcode-generation) |ragg2 |7 |               
+|[Diff files](#diff-files) |radiff2 |8 |                       
+|[Understanding Commands Inside r2](#understanding-commands-inside-r2)|radare2 |9 |
+|[TODO / Wish list](#todo-/-wish-list) | |10 |              
 
 
-##1: Downloading/Installing
+## Downloading/Installing 
 
 `wget https://github.com/radare/radare2 #` in order to download and follow instructions there (sys/install.sh for global install, sys/user.sh for local)
 
 
-##2: Starting r2 (radare2)
+## Starting r2 (radare2) 
 
 `r2 filename` will start and open radare2 with the specified binary file.
 radare2 can also be started while specifying many different arguments on the command-line. Bellow we cover some the flags we find to be most useful when starting radare2.
@@ -37,7 +40,7 @@ radare2 can also be started while specifying many different arguments on the com
 |Sandbox mode       |-S  |*SECURITY OF SANDBOX NOT VERIFIED BY n0l3ptr*|
 
 
-##3: Binary Information Extraction (rabin2)
+## Binary Information Extraction (rabin2) 
 
 rabin2 is a tool for examining/extracting properties and information from binary files (e.g. ELF). rabin2 is installed as part of the core of r2 so there is no need to install rabin2, if you already have r2. 
 
@@ -54,7 +57,7 @@ rabin2 is a tool for examining/extracting properties and information from binary
 |Relocations             |-R  |readelf -r file              |readelf -r file may show version numbers as well       |
 
 
-##4: Run binaries in exotic environments (rarun2)
+## Run binaries in exotic environments (rarun2) 
 
 rarun2 also comes along with the r2 core and allows us to locally host/run binaries. Below gives the basic usage of rarun2 to be able to setup interaction with the binary remotely. Rarun2 has many more paraters that can be used to set up a unique environment to run the binary.
 
@@ -66,7 +69,7 @@ rarun2 also comes along with the r2 core and allows us to locally host/run binar
 |Port to listen on | listen=8080 | | Binary can be interacted with at designated port|  
 |Pass args to binary| arg1=Value | ./file value |
 
-##5: Project Files (radare2)
+## Project Files (radare2) 
 
 _Disclaimer: Projects files are highly subject to change but here is the current state on March 14th 2017. The feature is still under high work in progress._
 
@@ -82,12 +85,12 @@ radare2 Project files are especially useful to save your work for later use, sha
 |Show project notes|Pn | Displays the project notes file:~/.config/radare2/projects/myproj/notes.txt| 
 |Edit project notes|Pn -|Opens the project notes file in vim| 
 
-##6: Custom Configuration File (~/.radare2rc)
+## Custom Configuration File (~/.radare2rc) 
 
 Each line in the ~/.radare2rc file will be interpreted at the start of each session. 
 
 
-##7: Shellcode Generator (ragg2)
+## Shellcode Generator (ragg2) 
 
 ragg2 is yet another tool that comes in the core of radare2. ragg2 allows us to compile tiny binaries, most useful for use to generate shellcode.
 
@@ -105,14 +108,25 @@ ragg2 is yet another tool that comes in the core of radare2. ragg2 allows us to 
 Example shellcode generation for a x86-64 Linux machine.
 `$ ragg2 -a x86 -b 64 -k linux -i exec`
 
-##8: Diff Files
+## Diff Files 
 
 
+## Understanding Commands Inside r2 (radare2) 
+
+Learning the commands for r2 appears to be a daunting task at first (Hence another reason for this cheat sheet) but in reality once you understand the logic behind the command syntax/semantics learning r2 is not that bad.
+
+* Mnemonic Commands (Short in length each letter has a meaning)
+* Unix-like Shell (Pipes, redirections, grep, less, json-indent,...)
+* Orthogonal (Mix commands and modifiers to express your wishes)
+
+`Example: pd 10 ~ call?`
+
+|p    |d          | 10                     |~   |call         |?            |
+|-----|-----------|------------------------|----|-------------|-------------|
+|print|disassembly|number of lines to print|grep|search string|count results|
 
 
-
-
-## TODO / Wish List
+## TODO / Wish List 
 * r2 -S : Sandbox mode : Secure? Uses?
 * radiff2
 * Custom config file

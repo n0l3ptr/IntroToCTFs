@@ -1,4 +1,4 @@
-# Crypto Homework 1:
+# Crypto Homework 2:
 
 ## Lecture slides at:
 https://docs.google.com/presentation/d/1toqYRReQCwf54CJQ9_sUcI1giv2juspYhjLUcxEE_ZA/edit?usp=sharing

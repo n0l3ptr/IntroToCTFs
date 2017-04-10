@@ -1,0 +1,1 @@
+Generate a pgp private key. Have 2 people sign it and then send me an encrypted message and your public key to my (mitch's) email address.

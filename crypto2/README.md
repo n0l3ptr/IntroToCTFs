@@ -5,7 +5,7 @@ https://docs.google.com/presentation/d/1toqYRReQCwf54CJQ9_sUcI1giv2juspYhjLUcxEE
 
 ### Question 1: 
 
-Generate a pgp private key. Have 2 people sign it and then send me an encrypted message and your public key to my (mitch's) email address.
+Generate a pgp private key. Have 2 people sign it and then send me an encrypted message and your public key to my (mitch's) email address. Here is a good tutorial on the basics of pgp/gpg
 
 ### Question 2:
 

@@ -5,7 +5,7 @@ https://docs.google.com/presentation/d/1toqYRReQCwf54CJQ9_sUcI1giv2juspYhjLUcxEE
 
 ### Question 1: 
 
-Generate a pgp private key. Have 2 people sign it and then send me an encrypted message and your public key to my (mitch's) email address. Here is a good tutorial on the basics of pgp/gpg
+Generate a pgp private key. Have 2 people sign it and then send me an encrypted message and your public key to my (mitch's) email address. Here is a good tutorial on the basics of pgp/gpg https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages-on-an-ubuntu-12-04-vps
 
 ### Question 2:
 

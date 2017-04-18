@@ -11,7 +11,7 @@ Decrypt vcipher.txt and find the flag - (Note: non-alpha characters should be un
 
 Decrypt feistel.bin - this file has been encrypted with:
 8 round feistel structure
-len(key) == 16
+key == str2num("thisisakey")
 
 with F box:
 
